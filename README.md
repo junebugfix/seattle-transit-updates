@@ -1,4 +1,4 @@
-## 🚎 seattle-transit-updates 🚎
+## 🚎 seattle transit updates 🚎
 
 A little api for querying Seattle's realtime GTFS data to get the next arrival times for a certain stop
 
