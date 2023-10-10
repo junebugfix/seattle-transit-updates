@@ -1,0 +1,13 @@
+{
+  "name": "kcm-updates",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "koa": "^2.14.2"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.4.10"
+  }
+}
