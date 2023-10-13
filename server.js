@@ -1,6 +1,6 @@
 const Koa = require("koa");
 const app = new Koa();
-const { getArrivalTimes } = require("./lib");
+const { getTransitArrivalTimes } = require("./lib");
 
 app.use(async (ctx) => {
   console.log(ctx.request.path);
@@ -9,12 +9,12 @@ app.use(async (ctx) => {
     return;
   }
 
-  const { routeId, stopId } = ctx.request.query;
-  if (!routeId || !stopId) {
+  const { stopId } = ctx.request.query;
+  if (!stopId) {
     ctx.status = 400;
   }
 
-  const res = await getArrivalTimes({ routeId, stopId });
+  const res = await getTransitArrivalTimes({ stopId });
   ctx.body = JSON.stringify(res);
 });
 
